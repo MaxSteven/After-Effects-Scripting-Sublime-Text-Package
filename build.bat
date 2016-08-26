@@ -12,12 +12,13 @@ set ae_folder_path=%base_path%\Adobe After Effects %version%
 set ae_scripts_folder_path=%ae_folder_path%\Support Files\Scripts
 
 
-cd "%file_path%"
+cd /d "%file_path%"
+echo %cd%
 
 :: Copying script to Scripts folder
 copy "%file_name%" "%ae_scripts_folder_path%\%file_name%"
 
-cd "%ae_folder_path%\Support Files"
+cd /d "%ae_folder_path%\Support Files"
 
 :: Running script in After Effect
 AfterFX -r "%ae_scripts_folder_path%\%file_name%"
