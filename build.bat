@@ -13,7 +13,6 @@ set ae_scripts_folder_path=%ae_folder_path%\Support Files\Scripts
 
 
 cd /d "%file_path%"
-echo %cd%
 
 :: Copying script to Scripts folder
 copy "%file_name%" "%ae_scripts_folder_path%\%file_name%"
